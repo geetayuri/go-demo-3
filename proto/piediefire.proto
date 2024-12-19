@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package data;
+
+option go_package = "protobuf/proto";
+
+service DataService {
+    rpc GetData (Empty) returns (DataResponse);
+}
+
+message Empty {}
+
+message DataResponse {
+    map<string, int32> beef = 1;
+}
